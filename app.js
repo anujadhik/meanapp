@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 Category= require('./models/category');
+Course= require('./models/course');
 
 
 // Connect to Mongoose
@@ -71,6 +72,47 @@ app.delete('/api/v1/categories/:_id', function(req, res){
     });
 });
 
+//APIs for courses
+app.get('/api/v1/courses', function(req, res){
+    Course.getCourses(function(err, courses){
+        if(err){
+            throw err;
+        }
+        res.json(courses);
+    });
+});
+
+app.post('/api/v1/courses', function(req, res){
+    var courses=req.body;
+    Course.addCourses(courses,function(err, courses){
+        if(err){
+            throw err;
+        }
+        res.json(courses);
+    });
+});
+
+app.put('/api/v1/courses/:_id', function(req, res){
+    var id=req.params._id;
+    var courses=req.body;
+    Course.updateCourses(id,courses,{},function(err, courses){
+        if(err){
+            throw err;
+        }
+        res.json(courses);
+    });
+});
+
+
+app.delete('/api/v1/courses/:_id', function(req, res){
+    var id=req.params._id;
+    Course.removeCourses(id,function(err, courses){
+        if(err){
+            throw err;
+        }
+        res.json(courses);
+    });
+});
 
 
 
