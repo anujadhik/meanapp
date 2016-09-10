@@ -28,6 +28,7 @@ app.get('/', function(req, res){
     res.send('Hello all');
 });
 
+//APIs for categories
 app.get('/api/v1/categories', function(req, res){
     Category.getCategories(function(err, categories){
         if(err){
