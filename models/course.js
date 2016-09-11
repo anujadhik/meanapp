@@ -10,7 +10,7 @@ var courseSchema = mongoose.Schema({
         type:String
     },
     price:{
-        type:String
+        type:Number
     },
     pictureUrl:{
         type:String
@@ -37,7 +37,7 @@ module.exports.addCourses = function(course, callback){
 module.exports.updateCourses = function(id, course, options, callback){
     var query = {_id: id};
     var update = {
-        title: course.name,
+        title: course.title,
         description:course.description,
         price:course.price,
         pictureUrl:course.pictureUrl,
