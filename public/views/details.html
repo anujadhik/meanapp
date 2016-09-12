@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<div ng-init="getCourse()" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="embed-responsive embed-responsive-16by9">
+
+                    <iframe class="embed-responsive-item" ng-src="//www.youtube.com/embed/"{{course.demoUrl}}></iframe>
+                </div>
+            </div>
+        </div>
+            <h2 class="featurette-heading">{{course.title}}</h2>
+            <p class="lead">Description: {{course.description}}</p>
+            <p class="lead">Price: {{course.price}}€</p>
+            <p class="lead">Part of {{course.category}} Course</p>
+            <p><button type="button" class="btn btn-success">Get full access</button>
+        </p></div>
+
+</div>
+
+<div class="pull-right">
+    <a href="#/courses/edit/{{course._id}}">Edit</a> |  <a href="#" ng-click="removeCourse(course._id)">Delete</a>
+</div>
+

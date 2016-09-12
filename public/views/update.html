@@ -1,20 +1,7 @@
-<div class="row">
-    <div class=" col-md-4 col-lg-3 ">
-        <h4 class="title">ADMIN PANEL</h4>
-        <div>
-            <ul class="dashboard-menu">
-                <li><a href="#/">ADD COURSES</a></li>
-                <li><a href="#/">TUTORIALS</a></li>
-                <li><a href="#/">BOOKS</a></li>
-                <li><a href="#/">USERS</a></li>
-                <li><a href="#/">REQUEST</a></li>
-            </ul>
-        </div>
-    </div>
 <div class=" col-md-4 col-lg-6 ">
-            <h4 class="title">Add Courses</h4>
-            <div>
-                <form ng-submit="addCourse()">
+        <h4 class="title">Edit Courses</h4>
+        <div>
+                <form ng-submit="updateCourse()" ng-init="getCourse()">
                     <div class="form-group">
                         <label>Title</label>
                         <input type="text" class="form-control" ng-model="course.title" placeholder="">
@@ -51,4 +38,6 @@
                 </form>
             </div>
         </div>
+    </div>
+</div>
 </div>

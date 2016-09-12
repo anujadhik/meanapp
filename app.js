@@ -84,6 +84,16 @@ app.get('/api/v1/courses', function(req, res){
     });
 });
 
+app.get('/api/v1/courses/:_id', function(req, res){
+    Course.getCourseById(req.params._id, function(err, courses){
+        if(err){
+            throw err;
+        }
+        res.json(courses);
+    });
+});
+
+
 app.post('/api/v1/courses', function(req, res){
     var courses=req.body;
     Course.addCourses(courses,function(err, courses){

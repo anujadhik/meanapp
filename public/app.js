@@ -15,9 +15,22 @@ app.config(function($routeProvider,$locationProvider){
             controller:'CoursesController',
             templateUrl: 'views/details.html'
         })
+        .when('/courses/add',{
+            controller:'CoursesController',
+            templateUrl: 'views/admin.html'
+        })
+        .when('/courses/edit/:id',{
+            controller:'CoursesController',
+            templateUrl: 'views/update.html'
+        })
+        .when('/home', {
+            controller:'CoursesController',
+            templateUrl: 'views/home.html'
+        })
+
         .otherwise({
             redirectTo: '/'
         });
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 });
 

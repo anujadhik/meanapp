@@ -1,8 +1,40 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
 a {
   color: #00B7FF;
 }
+
+body {
+  min-height: 1000px;
+}
+
+.navbar-static-top {
+  margin-bottom: 25px;
+    font-family: 'Montserrat';
+    background-color:#ffffff;
+}
+
+#logo {
+    font-family: 'Dancing Script';
+    font-weight: bold;
+    font-size: 50px;
+    margin-right: 10px;
+    margin-left: 0px;
+    color: #ea1717 ;
+}
+
+nav{
+    font-size: 16px;
+    background-color:#ffffff;
+}
+
+h4.title{
+    font-family: 'Montserrat';
+    color: black;
+}
+#course-row{
+    margin-bottom: 25px;
+}
+.dashboard-menu{
+    font-family: 'Montserrat';
+}
+

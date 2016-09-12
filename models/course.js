@@ -28,6 +28,12 @@ module.exports.getCourses = function(callback, limit){
     Course.find(callback).limit(limit);
 }
 
+// Get Course
+module.exports.getCourseById = function(id, callback){
+    Course.findById(id, callback);
+}
+
+
 // Add Course
 module.exports.addCourses = function(course, callback){
     Course.create(course, callback);
